@@ -9,11 +9,36 @@
         .img-fluid{
             max-width: 100%;
         }
+        #mainbanner{
+            background-image: url("./img/BG.png");
+            height: 100vw;
+            max-height: 800px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto 100%;
+            transition: 0.5s;
+            color: white;
+            /* 압솔루트보단 디스플레이 플렉스 사용(코딩량이 늘어남) */
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-size: 48px;
+        }
+        #mainbanner:hover{
+            background-size: auto 150%;
+        }
+        @media (max-width:991px) {
+            h2 span{
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="mainbanner">
-        <img src="./img/BG.png" class="img-fluid" alt="">
+        <!-- <img src="./img/BG.png" class="img-fluid" alt=""> -->
+        <h2>삼양홀딩스<span>에 오신 것을 환영합니다</span></h2>
+            
     </div>
 
 </body>
