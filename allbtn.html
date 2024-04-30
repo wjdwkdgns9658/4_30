@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <style>
-        .bi-x-lg{
-            color: red;
+        .text-red{
+            color: red !important;
         }
+        .text-yellow{
+            color: yellow !important;
+        }
+        .text-green{
+            color: green !important;
+        }
+        
     </style>
 </head>
 <body>
@@ -18,8 +25,15 @@
     <!-- bi-x-lg -->
     <script>
         const allbtn = document.getElementById("allbtn");
-        document.getElementById("allbtn").addEventListener('click',function(){
-            allbtn.classList.toggle("bi-x-lg")
+        let status = true;
+        allbtn.addEventListener('click',function(){
+            if(status){
+                allbtn.classList = "bi bi-list fs-1 bi-x-lg text-green";
+                status = false;
+            }else{
+                allbtn.classList = "bi bi-list fs-1 ";
+                status = true;
+            }
         })
     </script>
 </body>
